@@ -1,4 +1,4 @@
-//java Str_Calc.java
+//  java Str_Calc.java     
                                    
 import java.util.Scanner;    
                                
@@ -8,7 +8,7 @@ public class Str_Calc {
     try{
       Scanner in = new Scanner(System.in);
                               
-      System.out.println("¬ведите выражение:");
+      System.out.println("Enter an expression:");
       String str = in.nextLine();
                         
       in.close(); 
@@ -29,7 +29,7 @@ public class Str_Calc {
 
 
 
-public class TOperation {
+class TOperation {
 
   private final String s_InputFormat = "\"[^\"]{0,10}\"\\s*((([*]|[/])\\s*([1-9]|10))|(([+]|[-])\\s*\"[^\"]{0,10}\"))";
 
@@ -50,7 +50,7 @@ public class TOperation {
     sExp = sExp.trim(); 
            
     if(!sExp.matches(s_InputFormat))   
-      throw new TOperation_Except("¬ыражение не соответствует формату."); 
+      throw new TOperation_Except("The expression does not match the format."); 
                                
     sOperand1 = sExp.substring(1, 1 + sExp.substring(1).indexOf("\"")); 
                                        
@@ -83,10 +83,10 @@ public class TOperation {
         break;                                                                  
       default:                          
                                                               
-        throw new TOperation_Except("Ќедопустимый знак операции."); 
+        throw new TOperation_Except("Invalid operation character."); 
            
-        //ѕри данном конструкторе никогда не выбрасываетс€  
-        //т.к. проверка происходит в конструкторе.        
+        //  
+        //        
     }                                                          
   }        
                            
